@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Petshop</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+    .header {
+        position: relative;
+        height: 300px;
+        
+        overflow: hidden;
+        color: #333;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .header:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('https://images.unsplash.com/photo-1559401001-516fbb6a6812?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGF0JTIwc2hvcHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
+        background-size: cover;
+        background-position: center;
+        filter: blur(5px);
+        z-index: -1;
+    }
+
+    .header h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 50px;
+        text-shadow: 2px 2px #fff;
+        animation: float 3s ease-in-out infinite;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .header h1:hover {
+        color: #a19594;
+        text-shadow: 2px 2px #fff, -2px -2px #fff, 2px -2px #fff, -2px 2px #fff;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translate(-50%, -50%) translateY(0);
+        }
+
+        50% {
+            transform: translate(-50%, -50%) translateY(-20px);
+        }
+
+        100% {
+            transform: translate(-50%, -50%) translateY(0);
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="header">
+		<h1>Bem-vindo ao meu Petshop!</h1>
+	</div>
+    <main>
+		<div class="navbar">
+            
+            <div class="box">
+                <div class="icon instagram">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </div>
+                <p>Instagram</p>
+            </div>
+
+            <div class="box">
+                <div class="icon whatsapp">
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                </div>
+                <p>Whatsapp</p>
+            </div>
+
+            <div class="box">
+                <div class="icon facebook">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </div>
+                <p>Facebook</p>
+            </div>
+        </div>
+	</main>	
+	<script src="script.js"></script>
+</body>
+</html>
